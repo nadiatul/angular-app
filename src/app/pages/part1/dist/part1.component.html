@@ -1,0 +1,39 @@
+<header class="pb-3 mb-5 border-bottom bg-brown rounded shadow-sm p-3">
+  <h1 class="h2 text-center mb-0 text-black fs-weight">DISTRICT MANAGER</h1>
+</header>
+
+<main>
+  <div class="container">
+    <div class="row mb-3">
+        <div class="col-md-4">
+            <label class="form-label fw-weight">Filter By Age</label>
+          <select class="form-select" aria-label="Default select example" (change)="onChange($event)">
+              <option selected class="d-none">Select Value</option>
+              <option *ngFor="let row of dropdownsAgeFilters" [value]="row.value">{{row.description}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-sm-6" *ngFor="let row of managers">
+          <div class="card mb-3 shadow" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4 mt-4">
+                  <img src="assets/user-photo.jpg" class="img img-responsive rounded-circle w-75 mx-4" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body ">
+                    <h5 class="card-title fw-bold">{{row.name}}</h5>
+                    <p class="my-0">Email: <span class="fw-bold small">{{row.email}}</span></p>
+                    <p class="my-0">Mobile: <span class="fw-bold small">{{row.phone}}</span></p>
+                    <p class="my-0">Company: <span class="fw-bold small">{{row.company}}</span></p>
+                    <p class="my-0">Address:<span class="fw-bold small">{{row.address.street}}</span> </p>
+                    <p class="my-0">Website: <span class="fw-bold small">{{row.website}}</span></p>
+                    <p class="my-0">Age: <span class="fw-bold small">{{row.age}}</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</main>
