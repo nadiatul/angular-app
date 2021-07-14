@@ -1,3 +1,10 @@
+This Project basically is to demostrate 2 Parts which are 
+
+Part 1 is a Design and Filter Managers By Age
+
+Part 2 is a Drawing diamonds from javascript
+
+
 # AngularApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
